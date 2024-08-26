@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serum Raw Data</title>
+    <style>
+        body {
+            font-family: Times New Roman, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('images/background.jpg') no-repeat center center fixed;
+            background-size: 100% 100%;
+            filter: brightness(100%);
+            color: white;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            margin: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        p {
+            font-size: 24px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid white;
+        }
+        th {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .download-link {
+            margin-top: 20px;
+        }
+        .download-link a {
+            color: #4CAF50;
+            text-decoration: none;
+			font-size: 2em;
+        }
+        .download-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Serum Raw Data</h1>
+    </header>
+    <div class="content">
+        <p>This is the serum raw data for population A. Only the first 100 rows are displayed.</p>
+        <table id="data-table">
+            <!-- Table data will be inserted here by JavaScript -->
+        </table>
+        <div class="download-link">
+            <a href="data/popA_serum_rawdata.csv" download>Download Serum Raw Data</a>
+        </div>
+    </div>
+    <script>
+        // JavaScript to load CSV data and insert into the table
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('data/popA_serum_rawdata.csv')
+                .then(response => response.text())
+                .then(text => {
+                    const rows = text.split('\n');
+                    const table = document.getElementById('data-table');
+                    const maxRows = 100; // Limit the number of rows to 100
+                    rows.slice(0, maxRows).forEach((row, rowIndex) => {
+                        const cells = row.split(',');
+                        const rowElement = document.createElement('tr');
+                        cells.forEach(cell => {
+                            const cellElement = rowIndex === 0 ? document.createElement('th') : document.createElement('td');
+                            cellElement.textContent = cell;
+                            rowElement.appendChild(cellElement);
+                        });
+                        table.appendChild(rowElement);
+                    });
+                    if (rows.length > maxRows) {
+                        const rowElement = document.createElement('tr');
+                        const cellElement = document.createElement('td');
+                        cellElement.textContent = `... and ${rows.length - maxRows} more rows`;
+                        cellElement.colSpan = rows[0].split(',').length;
+                        rowElement.appendChild(cellElement);
+                        table.appendChild(rowElement);
+                    }
+                });
+        });
+    </script>
+</body>
+</html>
