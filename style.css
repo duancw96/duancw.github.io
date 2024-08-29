@@ -7,17 +7,6 @@ body {
     color: #333;
 }
 
-header {
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-}
-
 .hero {
     height: 30vh; /* Reduce the height */
     display: flex;
