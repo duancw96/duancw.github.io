@@ -88,13 +88,11 @@ header {
 
 footer {
     background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     padding: 20px;
-    font-size: 30px; /* Increase footer text size */
-    position: fixed;
+    font-size: 30px;
     width: 100%;
-    bottom: 0;
 }
 
 footer a {
