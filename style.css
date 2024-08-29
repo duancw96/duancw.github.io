@@ -1,0 +1,130 @@
+body {
+    font-family: 'Times New Roman', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+    color: #fff;
+    font-size: 30px; /* Increase font size */
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px; /* Increase font size */
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    height: 30vh; /* Reduce the height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: 70px; /* To account for fixed header */
+}
+
+.hero-content {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 30px;
+    margin: 10px 0 0;
+}
+
+.content {
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 24px auto;
+    max-width: 1750px; /* Increase width by 50% */
+    border-radius: 10px;
+}
+
+.intro-text {
+    font-size: 30px; /* Increase intro text size */
+    line-height: 1.5;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.link-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.link-list li {
+    margin: 10px 0;
+}
+
+.link-list a {
+    font-size: 30px; /* Increase link text size */
+    color: #0099FF;
+    text-decoration: none;
+}
+
+.link-list a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px; /* Increase footer text size */
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
