@@ -1,5 +1,5 @@
 body {
-    font-family: 'Times New Roman', sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background: url('images/background.jpg') no-repeat center center fixed;
@@ -17,6 +17,24 @@ header {
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
+
+header .logo img {
+    height: 50px;
+    margin-right: 15px;
+}
+
+header .team-info {
+    flex-grow: 1;
+    color: #fff;
+    font-size: 30px; /* Match font size with contact */
+}
+
+header .team-info p {
+    margin: 0;
+    color: #fff;
+    font-size: 30px; /* Match font size with contact */
+}
+
 header nav ul {
     list-style-type: none;
     margin: 0;
