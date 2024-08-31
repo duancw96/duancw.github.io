@@ -52,11 +52,9 @@
         }
 
         .violent-roadmap {
-             max-width: 100%; /* 确保最大宽度不超过父容器的宽度 */
-             max-height: 100%; /* 确保图片高度不超过容器的高度 */
-             width: auto; /* 宽度自动调整，保持图片比例 */
-             height: auto; /* 高度自动调整，保持图片比例 */
-             object-fit: scale-down; /* 如果内容不能填满容器大小，将按比例缩小内容以适配容器 */
+            width: 100%; /* 宽度尽可能填满容器 */
+            height: 100%; /* 高度尽可能填满容器 */
+            object-fit: contain; /* 保证内容缩放以完全适应容器，保持比例 */
         }
 	    
         .hero p {
