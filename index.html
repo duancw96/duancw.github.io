@@ -44,17 +44,11 @@
             margin-top: 30px;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-	    overflow: hidden; /* 添加此属性以防内容溢出 */
-            max-height: 1400px; /* 控制容器的最大高度 */
-            display: flex; /* 使用flex布局使得图片垂直居中 */
-            justify-content: center; /* 水平居中内容 */
-            align-items: center; /* 垂直居中内容 */
         }
 
         .violent-roadmap {
-            width: 100%; /* 宽度尽可能填满容器 */
-            height: 100%; /* 高度尽可能填满容器 */
-            object-fit: contain; /* 保证内容缩放以完全适应容器，保持比例 */
+            max-width: 100%; /* 宽度尽可能填满容器 */
+            height: auto; /* 高度尽可能填满容器 */
         }
 	    
         .hero p {
